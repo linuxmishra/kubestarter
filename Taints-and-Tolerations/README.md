@@ -1,6 +1,6 @@
 ## Taints and Tolerations in Kubernetes
 
-### What are Taints amd Tolerations ?
+### What are Taints and Tolerations ?
 - Taints and tolerations are a mechanism in Kubernetes that allows you to control which pods can be scheduled on specific nodes. 
 - They work together to ensure pods are not placed on inappropriate nodes.
 
