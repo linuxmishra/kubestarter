@@ -3,7 +3,21 @@ apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
   - role: control-plane
     image: kindest/node:v1.33.1
+    extraPortMappings:
+      - containerPort: 30080
+        hostPort: 80
+        protocol: TCP
+    extraMounts:
+      - hostPath: /kind-data
+        containerPath: /mnt/data
   - role: worker
     image: kindest/node:v1.33.1
+    extraMounts:
+      - hostPath: /kind-data
+        containerPath: /mnt/data
   - role: worker
     image: kindest/node:v1.33.1
+    extraMounts:
+      - hostPath: /kind-data
+        containerPath: /mnt/data
+
